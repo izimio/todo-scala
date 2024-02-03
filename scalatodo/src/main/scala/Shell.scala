@@ -66,7 +66,7 @@ class Shell() {
             import java.io._
             val file = new File("todos.txt")
             val bw = new BufferedWriter(new FileWriter(file))
-            todoList.list().foreach(todo => {
+            todoList.list().reverse.foreach(todo => {
                 bw.write(s"${todo.id},${todo.title},${todo.description},${todo.isDone}\n")
             })
             bw.close()
